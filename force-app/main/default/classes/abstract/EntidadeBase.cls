@@ -5,8 +5,12 @@ public abstract class EntidadeBase {
 
     private String id {get; private set;}
 
-    public EntidadeBase(String id) {
+    public EntidadeBase() {
         this.id = UUID.randomUUID().toString();
+    }
+
+    public EntidadeBase(String id) {
+        this.id = id;
     }
 
     // ================================================================

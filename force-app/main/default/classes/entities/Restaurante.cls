@@ -12,8 +12,8 @@ public class Restaurante extends EntidadeBase {
     public CategoriaRestaurante categoria {get; private set;}
     public List<Produto> cardapio {get; private set;}
 
-    public Restaurante(String id, String nome, Endereco endereco, CategoriaRestaurante categoria, List<Produto> cardapio) {
-        super(id);
+    public Restaurante(String nome, Endereco endereco, CategoriaRestaurante categoria, List<Produto> cardapio) {
+        super();
 
         if (String.isBlank(nome)) {
             throw new IllegalArgumentException('O nome do restaurante não pode ser vazio.');

@@ -6,9 +6,7 @@ public abstract class Pessoa extends EntidadeBase {
     public String nome {get; private set;}
     public Documento documento {get; private set;}
 
-    public Pessoa(String id, String nome, Documento documento) {
-        super(id);
-
+    public Pessoa(String nome, Documento documento) {
         if (String.isBlank(nome)) {
             throw new IllegalArgumentException('O nome da pessoa não pode ser nulo.');
         }

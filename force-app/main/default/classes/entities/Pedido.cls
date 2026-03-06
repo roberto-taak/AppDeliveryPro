@@ -1,4 +1,4 @@
-public class Pedido {
+public class Pedido extends EntidadeBase {
     // ================================================================
     // CLASSE INTERNA
     // ================================================================
@@ -49,6 +49,8 @@ public class Pedido {
     public Dinheiro total {get; private set;}
 
     public Pedido(Cliente cliente, Restaurante restaurante) {
+        super();
+
         if (cliente == null) {
             throw new IllegalArgumentException('O cliente do pedido não pode ser nulo.');
         }

@@ -6,8 +6,8 @@ public class Cliente extends Pessoa {
     public Endereco endereco {get; private set;}
     public String telefone {get; private set;}
 
-    public Cliente(String id, String nome, Documento documento, Endereco endereco, String telefone) {
-        super(id, nome, documento);
+    public Cliente(String nome, Documento documento, Endereco endereco, String telefone) {
+        super(nome, documento);
 
         if (endereco == null) {
             throw new IllegalArgumentException('O endereço do cliente não pode ser nulo.');

@@ -7,8 +7,8 @@ public class Produto extends EntidadeBase {
     public Dinheiro precoBase {get; private set;}
     public PoliticaDePreco politicaDePreco {get; private set;}
 
-    public Produto(String id, String nome, Dinheiro precoBase, PoliticaDePreco politicaDePreco) {
-        super(id);
+    public Produto(String nome, Dinheiro precoBase, PoliticaDePreco politicaDePreco) {
+        super();
         
         if (String.isBlank(nome)) {
             throw new IllegalArgumentException('O nome do produto não pode ser vazio.');
